@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 
 const EditTask = ({setTasks, taskList, task}) => {
-	//monitoring state of the edited task
 	const [editedTask, setEditedTask] = useState({});
-
-	//monitoring selected task
   	const [selectedTask, setSelectedTask] = useState(null);
-
 	const handleEditTask = (task) => {
-		//this makes selectedTask true
 		setSelectedTask(task);
 		setEditedTask({ ...task });
 	};
@@ -19,7 +14,6 @@ const EditTask = ({setTasks, taskList, task}) => {
 	 };
 
 	const handleSaveChanges = () => {
-		// setTasks([]);
 	    const updatedTasks = taskList.map(taskNew =>
 	      taskNew.id === editedTask.id ? editedTask : taskNew
 	    );
@@ -45,7 +39,6 @@ const EditTask = ({setTasks, taskList, task}) => {
 		)}
   		</>
 	)
-
 }
 
 export default EditTask;
