@@ -19,7 +19,7 @@ const App = () => {
   const [count, setCount] = useState(0);
 
   //monitoring selected task
-  const [selectedTask, setSelectedTask] = useState('');
+  const [selectedTask, setSelectedTask] = useState('No task selected');
 
   //monitoring state of the edited task
   const [editedTask, setEditedTask] = useState({});
