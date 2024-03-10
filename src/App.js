@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import AddNewTask from './components/AddNewTask';
-import TaskList from './components/TaskList';
-import ActiveTasksCounter from './components/ActiveTasksCounter';
-import DeleteAll from './components/DeleteAll';
-import CurrentlyViewing from './components/CurrentlyViewing';
+import AddNewTask from './components/AddNewTask/AddNewTask';
+import TaskList from './components/TaskList/TaskList';
+import ActiveTasksCounter from './components/ActiveTasksCounter/ActiveTasksCounter';
+import DeleteAll from './components/DeleteAll/DeleteAll';
+import CurrentlyViewing from './components/CurrentlyViewing/CurrentlyViewing';
+import Image from './components/Image/Image';
 
 import './App.scss';
 import "bootstrap/dist/css/bootstrap.min.css";

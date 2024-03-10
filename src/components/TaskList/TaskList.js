@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import EditTask from './EditTask';
-import ViewTask from './ViewTask';
-import DeleteTask from './DeleteTask';
+import EditTask from '../EditTask/EditTask';
+import ViewTask from '../ViewTask/ViewTask';
+import DeleteTask from '../DeleteTask/DeleteTask';
 
 const TaskList = ({setTasks, taskList, setCount, count, setSelectedTask}) => {
 
