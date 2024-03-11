@@ -30,25 +30,29 @@ const AddNewTask = ({addTask}) => {
 		<>
         	<button className="btn btn-primary" onClick={createTask}>Add new task</button>
 	        {showModal && (
-	          <div className="marsModal card" style={{width: "18rem"}}>
+	          <div className="card">
 	            <div className="card-body">
-
 	              <h2 className="card-title">Create New Task</h2>
-
-	              	<label className="card-text">Name:</label>
-	                <input type="text" value={taskName} onChange={(e) => setTaskName(e.target.value)}  />
-
-	              	<label className="card-text">Description:</label>
-	                <textarea value={taskDescription} onChange={(e) => setTaskDescription(e.target.value)} />
-
-	               	<label className="card-text">Owner:</label>
-	                <input value={owner} onChange={(e) => setNameOfOwner(e.target.value)} />
-
-            		<label className="card-text">User who is assigned to this task:</label>
-	                <input value={assignedUser} onChange={(e) => setNameOfAssignedUser(e.target.value)} />
-
-	              <button className="btn btn-success" onClick={addTaskNew}>Add</button>
-	              <span className="btn btn-secondary close" onClick={() => setShowModal(false)}>Cancel</span>
+	              <form>
+					<div class="form-group">
+						<label className="card-text">Name:</label>
+						<input className="form-control" type="text" value={taskName}  onChange={(e) => setTaskName(e.target.value)}  />
+					</div>
+	              	<div class="form-group">
+		              	<label className="card-text">Description:</label>
+		                <textarea className="form-control" value={taskDescription} onChange={(e) => setTaskDescription(e.target.value)} />
+	                </div>
+	                <div class="form-group">
+		               	<label className="card-text">Owner:</label>
+		                <input className="form-control" value={owner} onChange={(e) => setNameOfOwner(e.target.value)} />
+	                </div>
+	                <div class="form-group">
+	            		<label className="card-text">User who is assigned to this task:</label>
+		                <input className="form-control" value={assignedUser} onChange={(e) => setNameOfAssignedUser(e.target.value)} />
+	                </div>
+		              <button className="btn btn-success" onClick={addTaskNew}>Add</button>
+		              <button className="btn btn-secondary close" onClick={() => setShowModal(false)}>Cancel</button>
+	            	</form>
 	            </div>
 	          </div>
 	        )}

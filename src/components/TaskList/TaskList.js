@@ -8,15 +8,14 @@ const TaskList = ({setTasks, taskList, setCount, count, setSelectedTask}) => {
   const [isViewTaskOpen, setIsViewTaskOpen] = useState(false);
 
   const handleViewTaskChange = (value) => {
-    // Update the state in the parent component
     setIsViewTaskOpen(value);
   };
 
 
 	return (
-    <div className="task-list">
+    <>
     {taskList.map((task, index) => (
-      <div key={index} className="row task-card">
+      <div key={index} className="task-card">
         <div className="card-body col-md-8">
           <h3 className="card-title">Task name: {task.name}</h3>
           <p className="card-text">Task description: {task.description}</p>
@@ -33,7 +32,7 @@ const TaskList = ({setTasks, taskList, setCount, count, setSelectedTask}) => {
         </div>
         </div>
       ))}
-    </div>
+    </>
   )
 }
 

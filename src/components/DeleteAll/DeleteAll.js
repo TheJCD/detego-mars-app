@@ -7,11 +7,7 @@ const DeleteAll = ({setTasks, setCount}) => {
 		setCount(0);
 	};
 
-	return (
-		<div>
-			<button className="btn btn-danger" onClick={deleteAll}>Delete All</button>
-		</div>
-	)
+	return <button className="btn btn-danger" onClick={deleteAll}>Delete All</button>
 }
 
 export default DeleteAll;

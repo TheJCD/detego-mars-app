@@ -26,14 +26,16 @@ const EditTask = ({setTasks, taskList, task}) => {
 		<button className="btn btn-secondary" onClick={() => handleEditTask(task)}>Edit task</button>
 		{selectedTask && (
 		<div className="marsModal">
-            <div className="modal-content">
-            {/*<span className="close" onClick={() => selectedTask(null)}>Cancel</span>*/}
-	            <h2>Edit Task</h2>
-	            <input type="text" name="name" value={editedTask.name} onChange={handleChange} />
-	            <textarea name="description" value={editedTask.description} onChange={handleChange}/>
-	            <input type="text" name="owner" value={editedTask.owner} onChange={handleChange} />
-	            <input type="text" name="assignedUser" value={editedTask.assignedUser} onChange={handleChange} />
-	            <button className="btn btn-success" onClick={handleSaveChanges}>Save Changes</button>
+			<div className="card-body">
+            	<div className="modal-content">
+	            {/*<span className="close" onClick={() => selectedTask(null)}>Cancel</span>*/}
+		            <h2 className="card-title">Edit Task</h2>
+		            <input className="form-control" type="text" name="name" value={editedTask.name} onChange={handleChange} />
+		            <textarea className="form-control" name="description" value={editedTask.description} onChange={handleChange}/>
+		            <input className="form-control" type="text" name="owner" value={editedTask.owner} onChange={handleChange} />
+		            <input className="form-control" type="text" name="assignedUser" value={editedTask.assignedUser} onChange={handleChange} />
+		            <button className="btn btn-success" onClick={handleSaveChanges}>Save Changes</button>
+	            	</div>
             </div>
   		</div>
 		)}
