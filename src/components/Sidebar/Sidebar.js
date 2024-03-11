@@ -8,9 +8,7 @@ const SidebarComponent = ({count, selectedTask, setTasks, setCount, tasks}) => {
     <div className="sidebar">
       <ActiveTasksCounter count={count}/>
       <CurrentlyViewing selectedTask={selectedTask}/>
-      {tasks.length > 0 &&
-        <DeleteAll setTasks={setTasks} setCount={setCount}/>
-      }
+      {tasks.length > 0 && <DeleteAll setTasks={setTasks} setCount={setCount}/>}
     </div>
   );
 }
