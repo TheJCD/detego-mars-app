@@ -8,3 +8,7 @@
 
 1. Add this to the scripts block in package.json `"test": "jest --env=jsdom"`
 2. I had to install `npm install -D jest-environment-jsdom`
+
+# Troubleshooting
+
+- Unfortunately the app is currently not responsive. For the correct viewing experience please make sure the viewport is > 1200px.
