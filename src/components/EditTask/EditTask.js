@@ -19,24 +19,45 @@ const EditTask = ({setTasks, taskList, task}) => {
 	    );
 	    setTasks(updatedTasks);
 	    setSelectedTask(null);
-	}; 
+	};
+
+	const closeEditedTask = () => {
+		console.log('hit')
+		setSelectedTask(null);
+	}
 
 	return (
 		<>
-		<button className="btn btn-secondary" onClick={() => handleEditTask(task)}>Edit task</button>
+		<button className="btn btn-secondary ms-3" onClick={() => handleEditTask(task)}>Edit task</button>
 		{selectedTask && (
-		<div className="marsModal">
-			<div className="card-body">
-            	<div className="modal-content">
-	            {/*<span className="close" onClick={() => selectedTask(null)}>Cancel</span>*/}
-		            <h2 className="card-title">Edit Task</h2>
+		<div className="viewTaskCard">
+	    	<div className="modal-content">
+	        {/*<span className="close" onClick={() => selectedTask(null)}>Cancel</span>*/}
+	            <h2 className="card-title">Edit Task</h2>
+	            <div className="form-group">
+					<label className="card-text">Task name:</label>
 		            <input className="form-control" type="text" name="name" value={editedTask.name} onChange={handleChange} />
-		            <textarea className="form-control" name="description" value={editedTask.description} onChange={handleChange}/>
-		            <input className="form-control" type="text" name="owner" value={editedTask.owner} onChange={handleChange} />
+				</div>
+
+				<div className="form-group">
+					<label className="card-text">Task description:</label>
+		           	<textarea className="form-control" name="description" value={editedTask.description} onChange={handleChange}/>
+				</div>
+
+				<div className="form-group">
+					<label className="card-text">Task owner:</label> 
+	            	<input className="form-control" type="text" name="owner" value={editedTask.owner} onChange={handleChange} />
+				</div>
+
+				<div className="form-group">
+					<label className="card-text">Assigned user:</label>
 		            <input className="form-control" type="text" name="assignedUser" value={editedTask.assignedUser} onChange={handleChange} />
+				</div>
+				<div className="mt-3">
 		            <button className="btn btn-success" onClick={handleSaveChanges}>Save Changes</button>
-	            	</div>
-            </div>
+		            <button className="btn btn-secondary ms-2" onClick={closeEditedTask}>Cancel Changes</button>
+        		</div>
+        	</div>
   		</div>
 		)}
   		</>

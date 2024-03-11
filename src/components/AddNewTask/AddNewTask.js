@@ -30,28 +30,30 @@ const AddNewTask = ({addTask}) => {
 		<>
         	<button className="btn btn-primary" onClick={createTask}>Add new task</button>
 	        {showModal && (
-	          <div className="card">
+	          <div className="card mt-2">
 	            <div className="card-body">
 	              <h2 className="card-title">Create New Task</h2>
 	              <form>
-					<div class="form-group">
-						<label className="card-text">Name:</label>
+					<div className="form-group">
+						<label className="card-text">Task name:</label>
 						<input className="form-control" type="text" value={taskName}  onChange={(e) => setTaskName(e.target.value)}  />
 					</div>
-	              	<div class="form-group">
-		              	<label className="card-text">Description:</label>
+	              	<div className="form-group">
+		              	<label className="card-text">Task description:</label>
 		                <textarea className="form-control" value={taskDescription} onChange={(e) => setTaskDescription(e.target.value)} />
 	                </div>
-	                <div class="form-group">
-		               	<label className="card-text">Owner:</label>
+	                <div className="form-group">
+		               	<label className="card-text">Task owner:</label>
 		                <input className="form-control" value={owner} onChange={(e) => setNameOfOwner(e.target.value)} />
 	                </div>
-	                <div class="form-group">
-	            		<label className="card-text">User who is assigned to this task:</label>
+	                <div className="form-group">
+	            		<label className="card-text">Assigned User:</label>
 		                <input className="form-control" value={assignedUser} onChange={(e) => setNameOfAssignedUser(e.target.value)} />
 	                </div>
+	                <div className="mt-3">
 		              <button className="btn btn-success" onClick={addTaskNew}>Add</button>
-		              <button className="btn btn-secondary close" onClick={() => setShowModal(false)}>Cancel</button>
+		              <button className="btn btn-secondary close ms-2" onClick={() => setShowModal(false)}>Cancel</button>
+	            	</div>
 	            	</form>
 	            </div>
 	          </div>

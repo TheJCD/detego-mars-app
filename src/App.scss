@@ -33,7 +33,7 @@
   position: relative;
   top: 150px;
   float: left;
-  width: 800px;
+  width: 900px;
   padding-left: 20px;
   padding-top: 20px;
 }
@@ -51,7 +51,7 @@
 .task-card {
   margin-top: 20px;
   padding: 20px;
-  border: 1px solid red;
+  border: 1px solid grey;
 }
 .applicationHeading, .applicationParagraph {
   display: inline-block;
@@ -67,4 +67,16 @@
   padding-left: 20px;
   margin-bottom: 0;
   padding-top: 23px;
+}
+
+.viewTaskCard {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background: #ffffff;
+  // height: 100vh;
+  padding: 2rem;
+  border: 1px solid grey;
 }

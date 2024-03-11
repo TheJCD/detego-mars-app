@@ -8,7 +8,7 @@ const DeleteTask = ({setTasks, taskList, task, setCount, count}) => {
 		setCount(count - 1);
 	};
 
-	return <button className="btn btn-danger"onClick={deleteTask}>Delete Task</button>
+	return <button className="btn btn-danger ms-3"onClick={deleteTask}>Delete Task</button>
 }
 
 export default DeleteTask;
