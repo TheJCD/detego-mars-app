@@ -14,7 +14,7 @@ const HeaderComponent = () => {
   return (
     <div className="header">
       {imageLoaded ? (<img src={src} alt="Async Image" />) : (<div>Loading...</div>)}
-      <h1 className="applicationHeading">Mars Task Tracker</h1>
+      <h1 className="applicationHeading">Mission Mars: Task Tracking Beyond Earth's Bounds</h1>
       <p className="applicationParagraph">Beta version</p>
     </div>
   );
