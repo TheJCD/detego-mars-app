@@ -9,9 +9,7 @@ const AddNewTask = ({addTask}) => {
   	const [assignedUser, setNameOfAssignedUser] = useState('');
   	const [taskDescription, setTaskDescription] = useState('');
 
-	const createTask = () => {
-	    setShowModal(true);
-	};
+	const createTask = () => setShowModal(true);
 
 	const addTaskNew = () => {
 	    // Add task to list of tasks
@@ -47,7 +45,7 @@ const AddNewTask = ({addTask}) => {
 		                <input className="form-control" value={owner} onChange={(e) => setNameOfOwner(e.target.value)} />
 	                </div>
 	                <div className="form-group">
-	            		<label className="card-text">Assigned User:</label>
+	            		<label className="card-text">Assigned user:</label>
 		                <input className="form-control" value={assignedUser} onChange={(e) => setNameOfAssignedUser(e.target.value)} />
 	                </div>
 	                <div className="mt-3">

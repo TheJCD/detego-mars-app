@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-const CurrentlyViewing = ({selectedTask}) => {
-  	
-	return <p>Currently viewing: {selectedTask}</p>
-	
-}
+const CurrentlyViewing = ({selectedTask}) => <p>Currently viewing: {selectedTask}</p>;
 
 export default CurrentlyViewing;

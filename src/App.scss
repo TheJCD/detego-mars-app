@@ -16,7 +16,6 @@
   object-fit: cover;
 }
 
-
 .sidebar {
   position: relative;
   top: 150px;
@@ -38,21 +37,6 @@
   padding-top: 20px;
 }
 
-.marsModal {
-  border: 1px solid black;
-  padding: 25px;
-  left: 0;
-  z-index: 1;
-  background: grey;
-  height: 100%;
-  margin: 0 10px 0 10px;
-}
-
-.task-card {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid grey;
-}
 .applicationHeading, .applicationParagraph {
   display: inline-block;
   vertical-align: middle;
@@ -69,7 +53,7 @@
   padding-top: 23px;
 }
 
-.viewTaskCard {
+.openTaskCard {
   position: absolute;
   left: 0;
   top: 0;

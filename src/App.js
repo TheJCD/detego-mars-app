@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import AddNewTask from './components/AddNewTask/AddNewTask';
 import TaskList from './components/TaskList/TaskList';
-import Image from './components/Image/Image';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import './App.scss';
